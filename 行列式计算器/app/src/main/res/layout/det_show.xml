@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:orientation="vertical">
+
+		<com.mathsCalculate.determinant.CalculateView
+			android:id="@+id/calculateView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="bottom">
+
+		</com.mathsCalculate.determinant.CalculateView>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:orientation="vertical">
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/calculateButtonName"
+			android:id="@+id/myCalButton"
+			android:layout_gravity="center"
+			android:onClick="calculateDeterminantButton"
+			android:layout_marginRight="10dp"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/clearButtonName"
+			android:id="@+id/myClearButton"
+			android:layout_gravity="center"
+			android:onClick="clearDeterminantButton"/>
+
+	</LinearLayout>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/returnButtonName"
+		android:id="@+id/myReturnButton"
+		android:layout_gravity="center"
+		android:onClick="returnToMainButton"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="@string/determinantValueShow"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/result"
+		android:layout_gravity="center"/>
+
+</LinearLayout>
+
