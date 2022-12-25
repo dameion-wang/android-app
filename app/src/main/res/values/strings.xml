@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">低阶行列式计算器</string>
+    <string name="inputRank">行列式阶数：</string>
+	<string name="inputHint">范围:1-10</string>
+	<string name="startInputButtonName">开始输入行列式</string>
+	<string name="calculateButtonName">计算(不输入默认为0)</string>
+	<string name="clearButtonName">清空行列式</string>
+	<string name="returnButtonName">返回重新输入行列式阶数</string>
+	<string name="determinantValueShow">行列式的值:</string>
+</resources>
