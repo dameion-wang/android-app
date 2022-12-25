@@ -1,3 +1,3 @@
-# determinant calculator
+# 行列式计算器
 
-我学习android工程时尝试写的代码，还有很多不足需要之后进行补充修正
+进行1到10阶行列式计算的Android代码，不过画面适应比例不适用于Android8之前的手机屏幕
