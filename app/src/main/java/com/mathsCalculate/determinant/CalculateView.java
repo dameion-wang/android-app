@@ -15,28 +15,47 @@ public class CalculateView extends GridLayout {
 	//用于存储行列式具体的数字
 	private double[][] a;
 	private double[][] aBackup;
+	private int screen_width;
+	//private static CalculateView calculateView;
+	//private int screen_height;
 	private int cardWidth;
 	//private GestureDetector gestureDetector;
 	//构造器
 	public CalculateView(Context context) {
 		super(context);
 		//gestureDetector = new GestureDetector(getContext(),this);
+		
 		initialView();
+		//calculateView = this;
 	}
 	public CalculateView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		//gestureDetector = new GestureDetector(getContext(),this);
 		initialView();
+		//calculateView = this;
 	}
 	public CalculateView(Context context, AttributeSet attrs) {
 		
 		super(context, attrs);
 		//gestureDetector = new GestureDetector(getContext(),this);
 		initialView();
+		//calculateView = this;
 	}
+/**
+	public static CalculateView getCalculateView()
+	{
+		return calculateView;
+	}
+
+	public int getScreen_width()
+	{
+		return screen_width;
+	}
+	*/
 	//初始化界面
 	private void initialView(){
 		rankShow = MainActivity.getMainActivity().getRankNum();
+		screen_width= MainActivity.getMainActivity().getScreen_width();
 		setColumnCount(rankShow);
 		setRowCount(rankShow);
 		setBackgroundColor(0xffbbada0);
@@ -45,7 +64,8 @@ public class CalculateView extends GridLayout {
 		a = new double[rankShow][rankShow];
 		aBackup = new double[rankShow][rankShow];
 		//记录整个行列式的大小
-		cardWidth = 1000/rankShow;
+		cardWidth = screen_width/rankShow;
+		
 		//添加每个行列式的框架
 		addNumView(cardWidth, cardWidth);
 		//调用自己写的监听每个editText的方法

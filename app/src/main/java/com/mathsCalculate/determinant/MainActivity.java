@@ -14,6 +14,10 @@ public class MainActivity extends Activity
 	private static MainActivity mainActivity = null;
 
 	private int rankNum;
+	private int screen_width;
+	//private int screen_height;
+	private static WindowManager wm;
+	private static Display display;
 	private String rankStr;
 	private EditText editText;
 	//构造器
@@ -31,12 +35,18 @@ public class MainActivity extends Activity
 	{
 		return rankStr;
 	}
+	public int getScreen_width()
+	{
+		return screen_width;
+	}
     @Override
     protected void onCreate(Bundle savedInstanceState)
 	{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-
+		wm = getWindowManager();
+		display = wm.getDefaultDisplay();
+		screen_width=display.getWidth();
 		editText = (EditText)findViewById(R.id.editView);
         //得到输入的行列式阶数
 		editText.addTextChangedListener(new TextWatcher(){

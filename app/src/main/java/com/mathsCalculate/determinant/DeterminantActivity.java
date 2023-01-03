@@ -6,6 +6,7 @@ import android.os.*;
 import android.view.*;
 import android.widget.*;
 import java.math.*;
+import android.util.*;
 
 public class DeterminantActivity extends Activity
 {
@@ -13,11 +14,28 @@ public class DeterminantActivity extends Activity
 	private TextView tv;
 	private Button myCalButton;
 	private Button myReturnButton;
+	
+	
+
+/**
+	public void setScreen_height(int screen_height)
+	{
+		this.screen_height = screen_height;
+	}
+
+	public int getScreen_height()
+	{
+		return screen_height;
+	}
+	*/
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.det_show);
+		
+		//Toast.makeText(DeterminantActivity.this,String.valueOf(CalculateView.getCalculateView().getScreen_width()),Toast.LENGTH_LONG).show();
+		//screen_height=display.getHeight();
         calculateView = (CalculateView)findViewById(R.id.calculateView); 
 		tv = (TextView)findViewById(R.id.result);
 		myCalButton = (Button)findViewById(R.id.myCalButton);
